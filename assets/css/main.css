@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-item {
+  min-height: 50vh;
+}
+
+.grid-item.name-space {
+  height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.background-image-cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.name-space {
+  background-image: url("../images/space.jpg");
+}
+
+.name-mars {
+  background-image: url("../images/mars.jpg");
+}
+
+.name-moon {
+  background-image: url("../images/moon.jpg");
+}
+
+.name-orbit {
+  background-image: url("../images/orbit.jpg");
+}
+
+.name-saturn {
+  background-image: url("../images/saturn.jpg");
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item {
+  text-decoration: none;
+}
+
+.grid-item h1,
+.grid-item h2 {
+  text-transform: uppercase;
+  padding: 4vw 10vw;
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+}

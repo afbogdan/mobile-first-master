@@ -15,6 +15,16 @@ h3 {
   font-family: 'Chakra Petch', sans-serif;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
 .background-image-cover {
   background-position: center center;
   background-repeat: no-repeat;
@@ -43,7 +53,7 @@ h3 {
 
 .name-saturn {
   background-image: url("../images/saturn.jpg");
-  grid-area: saturn
+  grid-area: saturn;
 }
 
 .grid-item {
@@ -69,7 +79,68 @@ h3 {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#menu,
+#logo {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Black Han Sans', sans-serif;
+  width: 20vw;
+  height: 20vw;
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  z-index: 200;
+}
+
+#logo {
+  background-color: #2ecc71;
+  transform: rotate(270deg);
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+#menu {
+  background-color: #e67e22;
+  transition: background-color 0.1s ease-out;
+}
+
+header nav {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #e67e22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: transform 0.25s ease-in-out;
+  transform: translateX(-100vw);
+}
+
+header nav ul li {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.6rem;
+}
+
+header.opened nav {
+  transform: translate(0);
+}
+
+header.opened #menu {
+  background-color: #21201f;
+  transition-delay: 0.25s;
+}
+
 @media screen and (min-width: 768px) {
+  /* grid */
   .grid-container {
     min-height: 100vh;
     display: grid;
@@ -86,6 +157,31 @@ h3 {
 
   .grid-item.name-space {
     height: unset;
+  }
+
+  /* nav */
+  #menu { 
+    display: none;
+  }
+
+  #logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  header {
+    justify-content: start;
+  }
+
+  header nav {
+    display: block;
+    position: relative;
+    width: calc(100% - 150px);
+    background-color: #e74c3c;
+  }
+
+  header nav ul {
+    display: flex;
   }
 }
 

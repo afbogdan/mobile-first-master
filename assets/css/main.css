@@ -81,9 +81,11 @@ ul {
 
 header {
   position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
 #menu,
@@ -142,7 +144,8 @@ header.opened #menu {
 @media screen and (min-width: 768px) {
   /* grid */
   .grid-container {
-    min-height: 100vh;
+    min-height: calc(100vh - 75px);
+    margin-top: 75px;
     display: grid;
     grid-template-areas: 
       'space space space'
@@ -174,14 +177,28 @@ header.opened #menu {
   }
 
   header nav {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     position: relative;
     width: calc(100% - 150px);
+    max-height: 75px;
     background-color: #e74c3c;
+    transform: none;
+    transition: none;
   }
 
   header nav ul {
     display: flex;
+  }
+
+  header nav ul li {
+    margin: 0 1rem;
+    font-size: 1rem;
+  }
+
+  header nav ul li:first-child {
+    margin-left: 2rem;
   }
 }
 

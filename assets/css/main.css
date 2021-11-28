@@ -1,3 +1,10 @@
+:root {
+  --red: #e74c3c;
+  --green: #2ecc71;
+  --orange: #e67e22;
+  --black: #21201f;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +37,7 @@ ul {
 }
 
 footer {
-  background-color: #e74c3c;
+  background-color: var(--red);
   color: white;
   padding: 4vw;
 }
@@ -119,14 +126,14 @@ header {
 }
 
 #logo {
-  background-color: #2ecc71;
+  background-color: var(--green);
   transform: rotate(270deg);
   justify-content: flex-start;
   align-items: flex-end;
 }
 
 #menu {
-  background-color: #e67e22;
+  background-color: var(--orange);
   transition: background-color 0.1s ease-out;
 }
 
@@ -134,7 +141,7 @@ header nav {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background-color: #e67e22;
+  background-color: var(--orange);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,7 +161,7 @@ header.opened nav {
 }
 
 header.opened #menu {
-  background-color: #21201f;
+  background-color: var(--black);
   transition-delay: 0.25s;
 }
 
@@ -200,7 +207,7 @@ header.opened #menu {
     position: relative;
     width: calc(100% - 150px);
     max-height: 75px;
-    background-color: #e74c3c;
+    background-color: var(--red);
     transform: none;
     transition: none;
   }

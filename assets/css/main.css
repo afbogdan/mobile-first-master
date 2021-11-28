@@ -4,19 +4,15 @@
   box-sizing: border-box;
 }
 
-.grid-item {
-  min-height: 50vh;
-}
-
-.grid-item.name-space {
-  height: 100vh;
+html {
+  font-size: 18px;
 }
 
 h1,
 h2,
 h3 {
-    margin: 0;
-    font-family: 'Chakra Petch', sans-serif;
+  margin: 0;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .background-image-cover {
@@ -27,22 +23,36 @@ h3 {
 
 .name-space {
   background-image: url("../images/space.jpg");
+  grid-area: space;
 }
 
 .name-mars {
   background-image: url("../images/mars.jpg");
+  grid-area: mars;
 }
 
 .name-moon {
   background-image: url("../images/moon.jpg");
+  grid-area: moon;
 }
 
 .name-orbit {
   background-image: url("../images/orbit.jpg");
+  grid-area: orbit;
 }
 
 .name-saturn {
   background-image: url("../images/saturn.jpg");
+  grid-area: saturn
+}
+
+.grid-item {
+  min-height: 50vh;
+  text-decoration: none;
+}
+
+.grid-item.name-space {
+  height: 100vh;
 }
 
 .align-center {
@@ -51,14 +61,59 @@ h3 {
   align-items: center;
 }
 
-.grid-item {
-  text-decoration: none;
-}
-
 .grid-item h1,
 .grid-item h2 {
   text-transform: uppercase;
-  padding: 4vw 10vw;
+  padding: 1rem 3rem;
   color: white;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 768px) {
+  .grid-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+      'space space space'
+      'space space space'
+      'orbit moon mars'
+      'orbit saturn mars';
+  }
+
+  .grid-item {
+    min-height: unset;
+  }
+
+  .grid-item.name-space {
+    height: unset;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    grid-template-areas: 
+      'space space space space'
+      'space space space space'
+      'space space space space'
+      'orbit moon mars saturn';
+  } 
+}
+
+@media screen and (min-width: 1200px) {
+  .grid-container {
+    grid-template-areas: 
+      'space space space space space orbit'
+      'space space space space space moon'
+      'mars mars mars saturn saturn saturn';
+  } 
+}
+
+@media screen and (min-width: 1600px) {
+  .grid-container {
+    grid-template-areas: 
+      'space space space space space orbit'
+      'space space space space space moon'
+      'space space space space space mars'
+      'space space space space space saturn';
+  } 
 }

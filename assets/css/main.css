@@ -8,6 +8,10 @@ html {
   font-size: 18px;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 h1,
 h2,
 h3 {
@@ -23,6 +27,20 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+footer {
+  background-color: #e74c3c;
+  color: white;
+  padding: 4vw;
+}
+
+footer section {
+  margin: 1rem 0;
+}
+
+footer section * {
+  margin: 0.4rem 0;
 }
 
 .background-image-cover {
@@ -198,6 +216,17 @@ header.opened #menu {
 
   header nav ul li:first-child {
     margin-left: 2rem;
+  }
+
+  /* footer */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  footer section {
+    flex: 1;
   }
 }
 
